@@ -14,7 +14,7 @@ create table IF NOT EXISTS users(
     email varchar(20) unique,
     gender char(1) check ( gender='m' or gender='f' ),
     date_of_birth varchar(15),
-    created_at datetime,
+    created_at datetime default CURRENT_TIMESTAMP,
     country_code int,
     foreign key (country_code) references countries(code)
 );
@@ -45,11 +45,11 @@ create table IF NOT EXISTS order_products(
 
 insert into countries(name, continent_name) values ('Saudi Arabia','SA');
 
-insert into users(full_name, email, gender, date_of_birth, created_at, country_code) values ('rashed sharahili','rashed@gmail.com','m','1444',null,1);
+insert into users(full_name, email, gender, date_of_birth, created_at, country_code) values ('rashed sharahili','rashed@gmail.com','m','1444',now(),1);
 
-insert into orders(user_id, status,created_at) values (1, 'start', null);
+insert into orders(user_id, status,created_at) values (1, 'start', now());
 
-insert into products(name, price, status, created_at) values ('phone', 3000, 'valid', null);
+insert into products(name, price, status, created_at) values ('phone', 3000, 'valid', now());
 
 insert into order_products(order_id, product_id, quantity) values (1, 1, 1);
 

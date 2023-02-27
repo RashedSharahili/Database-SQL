@@ -1,10 +1,14 @@
 # Database-SQL
 
 ### Create Database
-``` create database IF NOT EXISTS store; ```
+``` 
+create database IF NOT EXISTS store; 
+```
 
 ### Use Database
-``` use store; ```
+``` 
+use store; 
+```
 
 ### Create countries Table
 ``` 

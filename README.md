@@ -3,7 +3,7 @@
 ### Create Database
 ``` create database IF NOT EXISTS store; ```
 
-### Use Database;
+### Use Database
 ``` use store; ```
 
 ### Create countries Table
